@@ -1,4 +1,4 @@
-# JavaScript Basics - Agenda
+# JavaScript Basics - Agenda Proposal
 
 | Session | Topic |
 |---------|-------|
