@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Basics - Agenda</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 48rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
+        h1 { border-bottom: 3px solid #f7df1e; padding-bottom: .3rem; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { text-align: left; padding: .5rem .75rem; border-bottom: 1px solid #ddd; }
+        th { background: #222; color: #f7df1e; }
+        td:first-child, th:first-child { width: 5rem; text-align: center; }
+        tbody tr:hover { background: #fffbe0; }
+        .error { color: #b00020; }
+    </style>
+</head>
+<body>
+<main id="content">Loading...</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+    const out = document.getElementById("content");
+    fetch("pages/agenda/agenda-IBM-customized.md")
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(md => { out.innerHTML = marked.parse(md); })
+        .catch(() => { out.innerHTML = '<p class="error">Cannot load the agenda. Serve this folder over HTTP (e.g. <code>python3 -m http.server</code>) instead of opening the file directly.</p>'; });
+</script>
+</body>
+</html>

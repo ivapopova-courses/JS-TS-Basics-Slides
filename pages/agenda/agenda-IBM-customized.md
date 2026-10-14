@@ -1,4 +1,4 @@
-# Agenda: 
+# JavaScript Basics - Agenda
 
 | Session | Topic |
 |---------|-------|
@@ -10,5 +10,5 @@
 | 6 | Objects and deep property access |
 | 7 | Array methods, functional style, built-in objects |
 | 8 | JSON, Node.js, modules, errors; project kickoff |
-| 9 | Practicalities: Git workflow, JS Linters, TypeScript basics |
+| 9 | Practicalities: Git workflow, JS linters, TypeScript basics |
 | 10 | Project review, wrap-up |
